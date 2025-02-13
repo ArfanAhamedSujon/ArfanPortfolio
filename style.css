@@ -4,13 +4,16 @@
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #080808;
     color:#fff ;
 }
 
 #header{
-    background: url(images/billy-huynh-W8KTS-mhFUE-unsplash.jpg);
+    background: url(images/Background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,7 +35,7 @@ nav{
     width: 140px;
 }
 nav ul li{
-    /* display: inline-block; */
+    display: inline-block;
     list-style: none;
     
 }
@@ -186,7 +189,7 @@ nav ul li a:hover::after{
     padding: 50px 0;
 }
 
-.word-list{
+.work-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25px,1fr));
     grid-gap: 40px;
@@ -293,4 +296,114 @@ nav ul li a:hover::after{
 .social-icons a:hover{
     color: #ff004f;
     transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    color: #080808;
+}
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding:25px 0 ;
+    background-color: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+#msg{
+    color:#61b752 ;
+    display: block;
+    margin-top: -40px;
+}
+
+/* -----------------css for responsive---------- */
+
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .add-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .add-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display:block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right .4s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .about-col2 h1{
+        font-size: 30px;
+    }
+    .about-col1, .about-col2{
+        flex-basis: 100%;
+    }
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 14px;
+    }
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .service-list{
+        display: block;
+        
+    }
+    .work-list{
+        display: block;
+        
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
 }
